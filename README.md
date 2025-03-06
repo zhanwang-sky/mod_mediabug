@@ -1,8 +1,16 @@
 # mod_mediabug
 
-## Usage
+## Build
 
+设置`PKG_CONFIG_PATH`环境变量：
 ```
-git submodule add https://github.com/zhanwang-sky/mod_mediabug.git src/mod/applications/mod_mediabug
-git apply src/mod/applications/mod_mediabug/patch
+export PKG_CONFIG_PATH=<freeswitch_install_prefix>/lib/pkgconfig
+```
+
+编译并安装`mod_mediabug`：
+```
+./bootstrap.sh
+./configure
+make
+make install
 ```
