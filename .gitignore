@@ -15,6 +15,6 @@ install-sh
 libtool
 ltmain.sh
 missing
-mod_unimrcp.la
-mod_unimrcp_la-mod_unimrcp.lo
-mod_unimrcp_la-mod_unimrcp.o
+mod_mediabug.la
+mod_mediabug_la-mod_mediabug.lo
+mod_mediabug_la-mod_mediabug.o
