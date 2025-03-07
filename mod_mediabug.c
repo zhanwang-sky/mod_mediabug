@@ -57,7 +57,7 @@ audio_manip_cb(switch_media_bug_t* bug, void* data, switch_abc_type_t type) {
   return SWITCH_TRUE;
 }
 
-/* static void name(switch_core_session_t *session, const char *data) */
+// static void name(switch_core_session_t *session, const char *data)
 SWITCH_STANDARD_APP(audio_manip_func) {
   switch_media_bug_t* bug = NULL;
   if (switch_core_media_bug_add(session, "audio_manip", NULL, audio_manip_cb, NULL, 0,
@@ -69,7 +69,7 @@ SWITCH_STANDARD_APP(audio_manip_func) {
   switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_INFO, "media bug attached\n");
 }
 
-/* Macro expands to: switch_status_t name(switch_loadable_module_interface_t **module_interface, switch_memory_pool_t *pool) */
+// switch_status_t mod_mediabug_load(switch_loadable_module_interface_t **module_interface, switch_memory_pool_t *pool)
 SWITCH_MODULE_LOAD_FUNCTION(mod_mediabug_load) {
   switch_application_interface_t* app_interface = NULL;
 
@@ -83,6 +83,7 @@ SWITCH_MODULE_LOAD_FUNCTION(mod_mediabug_load) {
   return SWITCH_STATUS_SUCCESS;
 }
 
+// switch_status_t mod_mediabug_shutdown(void)
 SWITCH_MODULE_SHUTDOWN_FUNCTION(mod_mediabug_shutdown) {
   switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "shutting down %s\n", modname);
   return SWITCH_STATUS_SUCCESS;
